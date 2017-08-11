@@ -1,13 +1,22 @@
 const assert = require('chai').assert;
-const expect = require('chai').expect;
-const should = require('chai').should;
+const bubbleSort = require('../bubble_sort');
 
-it('should sort an array', function() {
-  var mixedUp = ["z", "m", "b", "e"];
-  var sorted = bubbleSort(mixedUp);
-
-  expect(sorted[0]).toEqual("b");
-  expect(sorted[1]).toEqual("e");
-  expect(sorted[2]).toEqual("m");
-  expect(sorted[3]).toEqual("z");
+it('is a function', function () {
+  assert.isFunction(bubbleSort, 'this is a function');
 });
+
+it('can sort an array of 2 letters', function() {
+  assert.deepEqual(bubbleSort(["z", "a"]), ["a", "z"]);
+});
+
+it('can sort an array of 4 letters', function() {
+  assert.deepEqual(bubbleSort(["z", "e", "m", "b"]), ["b", "e", "m", "z"]);
+});
+
+it('can sort an array of 2 numbers', function() {
+  assert.deepEqual(bubbleSort([8, 3]), [3, 8]);
+})
+
+it('can sort an array of 4 numbers', function() {
+  assert.deepEqual(bubbleSort([23, 3, 54, 14]), [3, 14, 23, 54]);
+})
