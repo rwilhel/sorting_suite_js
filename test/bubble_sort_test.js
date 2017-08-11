@@ -20,3 +20,7 @@ it('can sort an array of 2 numbers', function() {
 it('can sort an array of 4 numbers', function() {
   assert.deepEqual(bubbleSort([23, 3, 54, 14]), [3, 14, 23, 54]);
 })
+
+it('can sort an array of 10 letters', function() {
+  assert.deepEqual(bubbleSort(["a", "s", "r", "m", "b", "d", "y", "z", "i", "q"]), ["a", "b", "d", "i", "m", "q", "r", "s", "y", "z"]);
+})
