@@ -1,7 +1,7 @@
 const assert = require('chai').assert;
 const bubbleSort = require('../bubble_sort');
 
-it('is a function', function () {
+it('is a function', function() {
   assert.isFunction(bubbleSort, 'this is a function');
 });
 
