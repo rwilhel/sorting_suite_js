@@ -12,3 +12,7 @@ it('can sort an array of 2 letters', function() {
 it('can sort an array of 4 letters', function() {
   assert.deepEqual(insertionSort(["d", "b", "a", "c"]), ["a", "b", "c", "d"]);
 });
+
+it('can sort an array of 2 numbers', function() {
+  assert.deepEqual(insertionSort([8, 2]), [2, 8]);
+});
